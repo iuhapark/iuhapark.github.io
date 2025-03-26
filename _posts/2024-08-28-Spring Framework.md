@@ -1,7 +1,7 @@
 ---
 title: "Spring Bean, Servlet, Springd의 3대 요소"
 date: 2024-08-28 14:15:03 +0900
-categories: [Programming, Spring]
+categories: [Spring]
 tags: [Spring Framework, 객체지향]
 math: false
 toc: true
