@@ -23,3 +23,29 @@ Docker는 개발자가 컨테이너를 구축, 배포, 실행, 업데이트 및 
 - 경량화: VM과 달리 컨테이너는 전체 OS 인스턴스 및 하이퍼바이저의 페이로드를 전달하지 않는다. 여기에는 코드를 실행하는 데 필요한 OS 프로세스 및 종속성만 포함된다. 컨테이너 크기는 메가바이트(일부 VM의 경우 기가바이트)로 측정되며, 하드웨어 용량을 더 잘 활용하고 시작 시간이 더 빠르다.
 - 개발자 생산성 향상: 컨테이너화된 애플리케이션은 한 번 작성하면 어디서나 실행할 수 있다. 또한 컨테이너는 VM에 비해 더 빠르고 쉽게 배포, 프로비저닝 및 재시작할 수 있다. 이러한 장점 덕분에 [지속적 통합](https://www.ibm.com/kr-ko/topics/continuous-integration) 및 [지속적 전달](https://www.ibm.com/kr-ko/topics/continuous-delivery)(CI/CD) 파이프라인에서 사용하기에 이상적이며 [애자일 및 DevOps 방식](https://www.ibm.com/kr-ko/topics/devops)을 채택하는 개발 팀에 더 적합하다.
 - 리소스 효율성 향상: 컨테이너를 사용하면 개발자는 동일한 하드웨어에서 VM을 사용할 때보다 몇 배나 많은 애플리케이션 사본을 실행할 수 있다. 이러한 효율성을 통해 클라우드 지출을 줄일 수 있다.
+
+**도커 명령어**
+
+```shell
+docker ps #find containers that running 
+
+docker ps -a #find all containers 
+
+docker rm [container id] #remove one container
+
+docker rm [container id] , [container id] #remove some containers
+
+docker rm `docker ps -a -q` #remove all containers
+
+docker images #find all images
+
+docker rmi [image id] #remove image
+
+docker rmi -f [image id] #remove image and container 
+
+docker rm -f $(docker ps -aq)
+
+docker rmi $(docker images -q)
+
+sudo systemctl start docker #docker demon 실행
+```

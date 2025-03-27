@@ -67,7 +67,7 @@ MSA는 API를 통해서만 상호작용할 수 있다. 즉, 마이크로 서비�
 
 *SOA - 대규모 컴퓨터 시스템을 구축할 때의 개념으로, 업무상 일 처리에 해당하는 소프트웨어 기능을 서비스로 판단하고 그 서비스를 네트워크상에 연동하여 시스템 전체를 구축해 가는 방법론이다.
 
-![](https://velog.velcdn.com/images/rachaen/post/bb6208d5-e690-48f6-8a8b-b69b9b04558a/image.png)
+![](https://velog.velcdn.com/images/rachaen/post/bb6208d5-e690-48f6-8a8b-b69b9b04558a/image.png){: width="600" }
 
 ## MSA 장단점
 
