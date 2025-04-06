@@ -1,6 +1,6 @@
 ---
 title: "인터넷 네트워크"
-date: 2025-08-20 14:15:03 +0900
+date: 2024-08-20 14:15:03 +0900
 categories: [Network]
 tags: [IP, TCP, UDP]
 math: false

@@ -1,6 +1,6 @@
 ---
 title: "OLAP vs. OLTP"
-date: 2025-04-20 09:51:28 +0900
+date: 2024-04-20 09:51:28 +0900
 categories: [Priogramming]
 tags: [Transaction, OLAP, OLTP]
 math: false
