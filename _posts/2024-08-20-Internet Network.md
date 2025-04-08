@@ -16,29 +16,29 @@ pin: true
 
 패킷(Packet)이라는 통신 단위로 데이터 전달
 
-![](/assets/img/posts/2024-08-20-1.png)
+![](/assets/img/posts/2024-08-20-1.png){: width="400" }
 
-![**클라이언트 패킷 전달**](/assets/img/posts/2024-08-20-2.png)
+![**클라이언트 패킷 전달**](/assets/img/posts/2024-08-20-2.png){: width="550" }
 
 **클라이언트 패킷 전달**
 
-![Screenshot 2024-08-28 at 12.18.30 PM.png](/assets/img/posts/2024-08-20-3.png)
+![Screenshot 2024-08-28 at 12.18.30 PM.png](/assets/img/posts/2024-08-20-3.png){: width="550" }
 
-![Screenshot 2024-08-28 at 12.18.20 PM.png](/assets/img/posts/2024-08-20-4.png)
+![Screenshot 2024-08-28 at 12.18.20 PM.png](/assets/img/posts/2024-08-20-4.png){: width="550" }
 
-![Screenshot 2024-08-28 at 12.19.50 PM.png](/assets/img/posts/2024-08-20-5.png)
+![Screenshot 2024-08-28 at 12.19.50 PM.png](/assets/img/posts/2024-08-20-5.png){: width="550" }
 
 IP 프로토콜의 한계
 
 # `TCP, UDP`
 
-![Screenshot 2024-08-28 at 12.55.55 PM.png](/assets/img/posts/2024-08-20-6.png)
+![Screenshot 2024-08-28 at 12.55.55 PM.png](/assets/img/posts/2024-08-20-6.png){: width="550" }
 
 ### TCP 특징
 
 전송 제어 프로토콜(Transmission Control Protocol)
 
-![Screenshot 2024-08-28 at 12.39.04 PM.png](/assets/img/posts/2024-08-20-7.png)
+![Screenshot 2024-08-28 at 12.39.04 PM.png](/assets/img/posts/2024-08-20-7.png){: width="550" }
 
 - 연결지향 - `TCP 3 way handshake` (가상 연결)
 - 데이터 전달 보증
@@ -62,9 +62,9 @@ IP 프로토콜의 한계
 
 PORT: 하나의 IP에서 여러 애플리케이션이
 
-![](/assets/img/posts/2024-08-20-8.png)
+![](/assets/img/posts/2024-08-20-8.png){: width="550" }
 
-![](/assets/img/posts/2024-08-20-9.png)
+![](/assets/img/posts/2024-08-20-9.png){: width="550" }
 
 # `PORT`
 

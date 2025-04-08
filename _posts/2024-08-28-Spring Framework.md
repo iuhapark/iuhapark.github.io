@@ -20,7 +20,7 @@ pin: true
 
 - 어노테이션을 통해 스프링에게 생성 및 관리 책임을 위임함 **제어 역전 (Inversion of Control, IoC)**
     
-    ![제어 역전](/assets/img/posts/2024-08-28-1.png)
+    ![제어 역전](/assets/img/posts/2024-08-28-1.png){: width="550" }
     
 - 자바 설정 클래스 내부(@Configuration)의 @Bean 어노테이션이 붙은 메서드들을 실행하면서 빈 저장소에 실제 빈을 등록
 - 가져올 때는 정의한 빈 메서드를 사용한다.
@@ -31,7 +31,7 @@ pin: true
 
 ![](/assets/img/posts/2024-08-28-2.png)
 
-![](/assets/img/posts/2024-08-28-3.png)
+![](/assets/img/posts/2024-08-28-3.png){: width="400" }
 
 TCP/IP 연결과 HTTP 요청 파싱, Content-Type 확인 등 위 이미지에서 비즈니스 로직 실행 제외한 모든 단계를 Servlet을 지원하는 WAS가 자동화해준다.
 
@@ -48,7 +48,7 @@ TCP/IP 연결과 HTTP 요청 파싱, Content-Type 확인 등 위 이미지에서
 - HTTP 요청 정보를 편리하게 사용할 수 있는 `HttpServletRequest`
 - HTTP 응답 정보를 편리하게 제공할 수 있는 `HttpServletResponse`
 
-![Http 요청, Http 응답 흐름](/assets/img/posts/2024-08-28-5.png)
+![Http 요청, Http 응답 흐름](/assets/img/posts/2024-08-28-5.png){: width="600" }
 
 ### HTTP 요청, 응답 흐름
 
@@ -60,7 +60,7 @@ TCP/IP 연결과 HTTP 요청 파싱, Content-Type 확인 등 위 이미지에서
 
 ### Servelet Container
 
-![Servelet Container](/assets/img/posts/2024-08-28-6.png)
+![Servelet Container](/assets/img/posts/2024-08-28-6.png){: width="450" }
 
 - 톰캣처럼 서블릿을 지원하는 WAS를 서블릿 컨테이너라고 함
 - 서블릿 컨테이너는 서블릿 객체를 생성, 초기화, 호출, 종료하는 생명주기 관리
@@ -211,7 +211,7 @@ private EntityManager entityManager;
 
 ### 멀티 쓰레드 Multi thread
 
-![멀티 쓰레드](/assets/img/posts/2024-08-28-8.png)
+![멀티 쓰레드](/assets/img/posts/2024-08-28-8.png){: width="600" }
 
 - 애플리케이션 코드를 하나하나 순차적으로 실행하는 것은 쓰레드, 쓰레드는 서블릿을 호출한다.
 - 자바 메인 메서드를 처음 실행하면 main이라는 이름의 쓰레드가 실행
@@ -219,11 +219,11 @@ private EntityManager entityManager;
 - 쓰레드는 한번에 하나의 코드 라인만 수행
 - 동시 처리가 필요하면 쓰레드를 추가로 생성
 
-![단일 쓰레드](/assets/img/posts/2024-08-28-9.png)
+![단일 쓰레드](/assets/img/posts/2024-08-28-9.png){: width="600" }
 
-![쓰레드에서 한 요청의 처리가 지연되면 다음 요청 발생시 타임아웃 등 오류 발생](/assets/img/posts/2024-08-28-10.png)
+![쓰레드에서 한 요청의 처리가 지연되면 다음 요청 발생시 타임아웃 등 오류 발생](/assets/img/posts/2024-08-28-10.png){: width="600" }
 
-![요청마다 쓰레드 생성](/assets/img/posts/2024-08-28-11.png)
+![요청마다 쓰레드 생성](/assets/img/posts/2024-08-28-11.png){: width="600" }
 
 **장점**
 
@@ -239,7 +239,7 @@ private EntityManager entityManager;
 - 쓰레드 생성에 제한이 없다.
     - 고객 요청이 너무 많이 오면, CPU, 메모리 임계점을 넘어서 서버가 죽을 수 있다.
 
-![쓰레드를 만들어놓고 풀에서 꺼내 쓰고 응답이 완료되면 반납](/assets/img/posts/2024-08-28-12.png)
+![쓰레드를 만들어놓고 풀에서 꺼내 쓰고 응답이 완료되면 반납](/assets/img/posts/2024-08-28-12.png){: width="600" }
 
 **특징**
 
