@@ -1,6 +1,6 @@
 ---
 title: "디자인 패턴 (생성 패턴, 구조 패턴, 행동 패턴)"
-date: 2025-02-20 17:27:15 +0900
+date: 2025-03-15 17:27:15 +0900
 categories: [Programming, Design Pattern]
 tags: [SOLID, 객체지향]
 math: false
@@ -20,7 +20,7 @@ pin: true
 
 팩토리 메서드 패턴은 (`new` 연산자를 사용한) 객체 생성 직접 호출들을 특별한 *팩토리* 메서드에 대한 호출들로 대체하라고 제안합니다. 객체들은 여전히 `new` 연산자를 통해 생성되지만 팩토리 메서드 내에서 호출되고 있습니다. 참고로 팩토리 메서드에서 반환된 객체는 종종 *제품*이라고도 불립니다.
 
-![팩토리 메서드](https://refactoring.guru/images/patterns/content/factory-method/factory-method-ko.png)
+![팩토리 메서드](/assets/img/posts/2024-03-15-1.png)
 
 ### **장점**
 
@@ -43,7 +43,7 @@ pin: true
 
 다음은 제품 변형을 다룰 차례입니다. 제품 패밀리의 각 변형에 대해 `Abstract­Factory` 추상 팩토리 인터페이스를 기반으로 별도의 팩토리 클래스를 생성합니다. 팩토리는 특정 종류의 제품을 반환하는 클래스입니다. 예를 들어 `Modern­Furniture­Factory`(현대식 가구 팩토리)에서는 다음 객체들만 생성할 수 있습니다: `Modern­Chair`(현대식 의자), `Modern­Sofa`(현대식 소파) 및 `Modern­Coffee­Table`(현대식 커피 테이블).
 
-![추상 팩토리](https://refactoring.guru/images/patterns/content/abstract-factory/abstract-factory-ko.png)
+![추상 팩토리](/assets/img/posts/2024-03-15-2.png)
 
 ### **장점**
 
@@ -61,7 +61,7 @@ pin: true
 
 **빌더**는 복잡한 객체들을 단계별로 생성할 수 있도록 하는 생성 디자인 패턴입니다. 이 패턴을 사용하면 같은 제작 코드를 사용하여 객체의 다양한 유형들과 표현을 제작할 수 있습니다.
 
-![빌더](https://refactoring.guru/images/patterns/content/builder/builder-ko.png)
+![빌더](/assets/img/posts/2024-03-15-3.png)
 
 빌더 패턴은 자신의 클래스에서 객체 생성 코드를 추출하여 *builders*라는 별도의 객체들로 이동하도록 제안합니다.
 
@@ -75,7 +75,7 @@ pin: true
 
 더 나아가 제품을 생성하는 데 사용하는 빌더 단계들에 대한 일련의 호출을 *디렉터 (관리자)*라는 별도의 클래스로 추출할 수 있습니다. 디렉터 클래스는 제작 단계들을 실행하는 순서를 정의하는 반면 빌더는 이러한 단계들에 대한 구현을 제공합니다.
 
-![디렉터](https://refactoring.guru/images/patterns/content/builder/builder-comic-2-ko.png)
+![디렉터](/assets/img/posts/2024-03-15-4.png)
 
 디렉터는 작동하는 제품을 얻기 위하여 어떤 건축 단계들을 실행해야 하는지 알고 있습니다.
 
@@ -99,7 +99,7 @@ pin: true
 
 **프로토타입**은 코드를 그들의 클래스들에 의존시키지 않고 기존 객체들을 복사할 수 있도록 하는 생성 디자인 패턴입니다.
 
-![](https://refactoring.guru/images/patterns/content/prototype/prototype.png)
+![](/assets/img/posts/2024-03-15-6.png)
 
 프로토타입 패턴은 실제로 복제되는 객체들에 복제 프로세스를 위임합니다. 패턴은 복제를 지원하는 모든 객체에 대한 공통 인터페이스를 선언합니다. 이 인터페이스를 사용하면 코드를 객체의 클래스에 결합하지 않고도 해당 객체를 복제할 수 있습니다. 일반적으로 이러한 인터페이스에는 단일 `clone` 메서드만 포함됩니다.
 
@@ -107,7 +107,7 @@ pin: true
 
 복제를 지원하는 객체를 *프로토타입*이라고 합니다. 당신의 객체들에 수십 개의 필드와 수백 개의 가능한 설정들이 있는 경우 이를 복제하는 것이 서브클래싱의 대안이 될 수 있습니다.
 
-![](https://refactoring.guru/images/patterns/content/prototype/prototype-comic-2-ko.png)
+![](/assets/img/posts/2024-03-15-7.png)
 
 미리 만들어진 프로토타입은 서브클래싱의 대안이 될 수 있습니다.
 
@@ -117,7 +117,7 @@ pin: true
 
 실제 산업에서의 프로토타입(원기)은 제품의 대량 생산을 시작하기 전에 다양한 테스트를 수행하는 데 사용됩니다. 그러나 프로그래밍의 프로토타입의 경우 프로토타입들은 실제 생산과정에 참여하지 않고 대신 수동적인 역할을 합니다.
 
-![프로토타입](https://refactoring.guru/images/patterns/content/prototype/prototype-comic-3-ko.png)
+![프로토타입](/assets/img/posts/2024-03-15-8.png)
 
 세포의 분열
 
@@ -138,7 +138,7 @@ pin: true
 
 **싱글턴**은 클래스에 인스턴스가 하나만 있도록 하면서 이 인스턴스에 대한 전역 접근(액세스) 지점을 제공하는 생성 디자인 패턴입니다.
 
-![](https://refactoring.guru/images/patterns/content/singleton/singleton.png)
+![](/assets/img/posts/2024-03-15-9.png)
 
 ### **실제상황 적용**
 
@@ -172,11 +172,11 @@ pin: true
 
 어댑터는 데이터를 다양한 형식으로 변환할 수 있을 뿐만 아니라 다른 인터페이스를 가진 객체들이 협업하는 데에도 도움을 줄 수 있습니다.
 
-![어댑터](https://refactoring.guru/images/patterns/content/adapter/adapter-ko.png)
+![어댑터](/assets/img/posts/2024-03-15-10.png)
 
 ### **실제상황 적용**
 
-![어댑터](https://refactoring.guru/images/patterns/content/adapter/adapter-comic-1-ko.png)
+![어댑터](/assets/img/posts/2024-03-15-11.png)
 
 해외여행 전과 후의 서류가방.
 
@@ -186,17 +186,91 @@ pin: true
 
 추상화와 구현을 분리해 둘을 각각 따로 발전시킬 수 있다.
 
-#컴포지트 Composite
+## 컴포지트 Composite
 
 0개, 1개 혹은 그 이상의 객체를 묶어 하나의 객체로 이용할 수 있다.
+
+**복합체** 패턴은 객체들을 트리 구조들로 구성한 후, 이러한 구조들과 개별 객체들처럼 작업할 수 있도록 하는 구조 패턴입니다.
+
+복합체 패턴은 객체 트리의 모든 컴포넌트들에 대해 재귀적으로 행동을 실행할 수 있도록 합니다.
+
+![](/assets/img/posts/2024-03-15-12.png)
+
+이 접근 방식의 가장 큰 이점은 더 이상 트리를 구성하는 객체들의 구상 클래스들에 대해 신경 쓸 필요도, 또 물건이 단순한 제품인지 내용물이 있는 상자인지 알 필요도 없다는 점입니다. 단순히 공통 인터페이스를 통해 모두 같은 방식으로 처리하시면 됩니다. 당신이 메서드를 호출하면 객체들 자체가 요청을 트리 아래로 전달합니다.
+
+### **실제상황 적용**
+
+![](/assets/img/posts/2024-03-15-13.png)
+
+군대 구조의 예시.
+
+대부분의 국가에서 군대는 계층구조로 구성되어 있습니다. 군대는 여러 사단으로 구성되며, 사단은 여단의 집합이고, 여단은 소대의 집합이며, 소대는 또 분대로 나누어질 수 있습니다. 마지막으로 분대는 실제 군인들의 작은 집합입니다. 명령들은 계층구조의 최상위에서 내려와 모든 병사가 자신이 수행해야 할 작업을 알게 될 때까지 계층구조의 각 하위 계층으로 전달됩니다.
+
+### **장점**
+
+- 다형성과 재귀를 당신에 유리하게 사용해 복잡한 트리 구조들과 더 편리하게 작업할 수 있습니다.
+- *개방/폐쇄 원칙*. 객체 트리와 작동하는 기존 코드를 훼손하지 않고 앱에 새로운 요소 유형들을 도입할 수 있습니다.
+
+### 단점
+
+- 기능이 너무 다른 클래스들에는 공통 인터페이스를 제공하기 어려울 수 있으며, 어떤 경우에는 컴포넌트 인터페이스를 과도하게 일반화해야 하여 이해하기 어렵게 만들 수 있습니다.
 
 ## **데코레이터 Decorator**
 
 기존 객체의 매서드에 새로운 행동을 추가하거나 오버라이드 할 수 있다.
 
+**데코레이터**는 객체들을 새로운 행동들을 포함한 특수 래퍼 객체들 내에 넣어서 위 행동들을 해당 객체들에 연결시키는 구조적 디자인 패턴입니다.
+
+![](/assets/img/posts/2024-03-15-14.png)
+
+### **실제상황 적용**
+
+![](/assets/img/posts/2024-03-15-15.png)
+
+여러 벌의 옷을 입으면 복합 효과를 얻을 수 있습니다.
+
+옷을 입는 것은 데코레이터 패턴을 사용하는 예입니다. 당신은 추울 때 스웨터로 몸을 감쌉니다. 스웨터를 입어도 춥다면 위에 재킷을 입고, 또 비가 오면 비옷을 입습니다. 이 모든 옷은 기초 행동을 '확장'하지만, 당신의 일부가 아니기에 필요하지 않을 때마다 옷을 쉽게 벗을 수 있습니다.
+
+### **장점**
+
+- 새 자식 클래스를 만들지 않고도 객체의 행동을 확장할 수 있습니다.
+- 런타임에 객체들에서부터 책임들을 추가하거나 제거할 수 있습니다.
+- 객체를 여러 데코레이터로 래핑하여 여러 행동들을 합성할 수 있습니다.
+- *단일 책임 원칙*. 다양한 행동들의 여러 변형들을 구현하는 모놀리식 클래스를 여러 개의 작은 클래스들로 나눌 수 있습니다.
+    
+    ### 단점
+    
+- 래퍼들의 스택에서 특정 래퍼를 제거하기가 어렵습니다.
+- 데코레이터의 행동이 데코레이터 스택 내의 순서에 의존하지 않는 방식으로 데코레이터를 구현하기가 어렵습니다.
+- 계층들의 초기 설정 코드가 보기 흉할 수 있습니다.
+
 ## **퍼사드 Facade**
 
 많은 분량의 코드에 접근할 수 있는 단순한 인터페이스를 제공한다.
+
+[**퍼사드 패턴**](https://refactoring.guru/ko/design-patterns/facade)은 라이브러리에 대한, 프레임워크에 대한 또는 다른 클래스들의 복잡한 집합에 대한 단순화된 인터페이스를 제공하는 구조적 디자인 패턴입니다.
+
+![](/assets/img/posts/2024-03-15-16.png)
+
+퍼사드는 움직이는 부분이 많이 포함된 복잡한 하위 시스템에 대한 간단한 인터페이스를 제공하는 클래스입니다. 하위 시스템과 직접 작업하는 것과 비교하면 퍼사드는 제한된 기능성을 제공합니다. 하지만 퍼사드에는 클라이언트들이 정말로 중요하게 생각하는 기능들만 포함됩니다.
+
+퍼사드는 당신의 앱을 수십 가지의 기능이 있는 정교한 라이브러리와 통합해야 하지만 그 기능의 극히 일부만을 필요로 할 때 편리합니다.
+
+### **실제상황 적용**
+
+![](/assets/img/posts/2024-03-15-17.png)
+
+전화로 주문하기.
+
+전화로 주문하기 위해 매장에 전화를 걸었을 때 전화를 받는 교환원이 바로 상점의 모든 서비스와 부서에 대한 당신의 퍼사드입니다. 이때 교환원은 주문 시스템, 지불 게이트웨이 및 다양한 배송 서비스에 대한 간단한 음성 인터페이스를 제공합니다.
+
+### **장점**
+
+- 복잡한 하위 시스템에서 코드를 별도로 분리할 수 있습니다.
+
+### **단점**
+
+- 퍼사드는 앱의 모든 클래스에 결합된 [**전지전능한 객체**](https://refactoring.guru/ko/antipatterns/god-object)가 될 수 있습니다.
 
 ## **플라이웨이트 Flyweight**
 
@@ -204,7 +278,6 @@ pin: true
 
 **플라이웨이트**는 각 객체에 모든 데이터를 유지하는 대신 여러 객체들 간에 상태의 공통 부분들을 공유하여 사용할 수 있는 RAM에 더 많은 객체들을 포함할 수 있도록 하는 구조 디자인 패턴입니다.
 
-![](https://refactoring.guru/images/patterns/content/flyweight/flyweight.png?id=e34fbacb847dd609b5e68aaf252c4db0)
 
 플라이웨이트 패턴은 객체 내부에 공유한 상태의 저장을 중단하고, 대신 이 상태를 이 상태에 의존하는 특정 메서드들에 전달할 것을 제안합니다. 고유한 상태만 객체 내에 유지되므로 해당 고유한 상태는 콘텍스트가 다른 곳에서 재사용할 수 있습니다. 이러한 객체들은 공유한 상태보다 변형이 훨씬 적은 고유한 상태에서만 달라지므로 훨씬 더 적은 수의 객체만 있으면 됩니다. 고유한 상태만 저장하는 객체를 플라이웨이트라고 합니다.
 
@@ -223,19 +296,16 @@ pin: true
 
 **프록시**는 다른 객체에 대한 대체 또는 자리표시자를 제공할 수 있는 구조 디자인 패턴입니다. 프록시는 원래 객체에 대한 접근을 제어하므로, 당신의 요청이 원래 객체에 전달되기 전 또는 후에 무언가를 수행할 수 있도록 합니다.
 
-![](https://refactoring.guru/images/patterns/content/proxy/proxy.png)
 
 프록시 패턴은 원래 서비스 객체와 같은 인터페이스로 새 프록시 클래스를 생성하라고 제안합니다. 그러면 프록시 객체를 원래 객체의 모든 클라이언트들에 전달하도록 앱을 업데이트할 수 있습니다. 클라이언트로부터 요청을 받으면 이 프록시는 실제 서비스 객체를 생성하고 모든 작업을 이 객체에 위임합니다.
 
-![](https://refactoring.guru/images/patterns/diagrams/proxy/solution-ko.png)
+![](/assets/img/posts/2024-03-15-18.png)
 
 프록시는 데이터베이스 객체로 자신을 변장합니다. 프록시는 지연된 초기화 및 결괏값 캐싱을 클라이언트와 실제 데이터베이스 객체가 알지 못하는 상태에서 처리할 수 있습니다.
 
 당신이 클래스의 메인 로직 이전이나 이후에 무언가를 실행해야 하는 경우 프록시는 해당 클래스를 변경하지 않고도 이 무언가를 수행할 수 있도록 합니다. 프록시는 원래 클래스와 같은 인터페이스를 구현하므로 실제 서비스 객체를 기대하는 모든 클라이언트에 전달될 수 있습니다.
 
 ### **실제상황 적용**
-
-![](https://refactoring.guru/images/patterns/diagrams/proxy/live-example.png)
 
 신용 카드는 현금과 마찬가지로 결제에 사용할 수 있습니다.
 
@@ -262,11 +332,9 @@ pin: true
 
 **책임 연쇄** 패턴은 핸들러들의 체인(사슬)을 따라 요청을 전달할 수 있게 해주는 행동 디자인 패턴입니다. 각 핸들러는 요청을 받으면 요청을 처리할지 아니면 체인의 다음 핸들러로 전달할지를 결정합니다.
 
-![](https://refactoring.guru/images/patterns/content/chain-of-responsibility/chain-of-responsibility.png?id=56c10d0dc712546cc283cfb3fb463458)
-
 ### **실제상황 적용**
 
-![](https://refactoring.guru/images/patterns/content/chain-of-responsibility/chain-of-responsibility-comic-1-ko.png?id=4446817e1e3108a57a1f3a9f113f06b4)
+![](/assets/img/posts/2024-03-15-19.png)
 
 기술 지원 부서로의 전화는 여러 교환원을 거쳐 이루어질 수 있습니다.
 
@@ -294,11 +362,8 @@ pin: true
 
 **커맨드**는 요청을 요청에 대한 모든 정보가 포함된 독립실행형 객체로 변환하는 행동 디자인 패턴입니다. 이 변환은 다양한 요청들이 있는 메서드들을 인수화 할 수 있도록 하며, 요청의 실행을 지연 또는 대기열에 넣을 수 있도록 하고, 또 실행 취소할 수 있는 작업을 지원할 수 있도록 합니다.
 
-![](https://refactoring.guru/images/patterns/content/command/command-ko.png)
 
 ### **실제상황 적용**
-
-![](https://refactoring.guru/images/patterns/content/command/command-comic-1.png)
 
 레스토랑에서 주문하기.
 
@@ -326,11 +391,9 @@ pin: true
 
 - 이터레이터 패턴을 사용하면 집합체 내에서 어떤 식으로 일이 처리되는지 몰라도 그 안에 들어있는 항목들에 대해서 반복작업을 수행 할 수 있다
 
-![](https://refactoring.guru/images/patterns/content/iterator/iterator-ko.png)
-
 반복자 패턴의 주 아이디어는 컬렉션의 순회 동작을 *반복자*라는 별도의 객체로 추출하는 것입니다.
 
-![](https://refactoring.guru/images/patterns/diagrams/iterator/solution1.png)
+![](/assets/img/posts/2024-03-15-20.png)
 
 반복자들은 다양한 순회 알고리즘들을 구현합니다. 여러 반복자 객체들이 동시에 같은 컬렉션을 순회할 수 있습니다.
 
@@ -342,8 +405,6 @@ pin: true
 
 
 ### **실제상황 적용**
-
-![](https://refactoring.guru/images/patterns/content/iterator/iterator-comic-1-ko.png)
 
 도보로 로마를 탐험하는 다양한 방법들
 
@@ -381,13 +442,13 @@ Iterator<Element> title = (Iterator<Element>) map.get("title");
 
 **중재자**는 객체 간의 혼란스러운 의존 관계들을 줄일 수 있는 행동 디자인 패턴입니다. 이 패턴은 객체 간의 직접 통신을 제한하고 중재자 객체를 통해서만 협력하도록 합니다.
 
-![](https://refactoring.guru/images/patterns/content/mediator/mediator.png)
+![](/assets/img/posts/2024-03-15-21.png)
 
 중재자 패턴은 서로 독립적으로 작동해야 하는 컴포넌트 간의 모든 직접 통신을 중단한 후, 대신 이러한 컴포넌트들은 호출들을 적절한 컴포넌트들로 리다이렉션하는 특수 중재자 객체를 호출하여 간접적으로 협력하게 하라고 제안합니다. 그러면 컴포넌트들은 수십 개의 동료 컴포넌트들과 결합되는 대신 단일 중재자 클래스에만 의존합니다.
 
 ### **실제상황 적용**
 
-![](https://refactoring.guru/images/patterns/diagrams/mediator/live-example.png)
+![](/assets/img/posts/2024-03-15-22.png)
 
 항공기 조종사들은 다음에 누가 비행기를 착륙시킬지를 결정할 때 서로 직접 대화하지 않습니다. 모든 통신은 비행기 관제탑을 통해 이루어집니다.
 
@@ -412,15 +473,13 @@ Iterator<Element> title = (Iterator<Element>) map.get("title");
 
 **메멘토**는 객체의 구현 세부 사항을 공개하지 않으면서 해당 객체의 이전 상태를 저장하고 복원할 수 있게 해주는 행동 디자인 패턴입니다.
 
-![](https://refactoring.guru/images/patterns/content/memento/memento-ko.png)
-
 ### **구조**
 
 ### **중첩된 클래스들에 기반한 구현**
 
 이 패턴의 고전적인 구현은 수많은 인기 프로그래밍 언어(예: C++, C# 및 자바)에서 사용할 수 있는 중첩 클래스에 대한 지원에 의존합니다.
 
-![](https://refactoring.guru/images/patterns/diagrams/memento/structure1.png)
+![](/assets/img/posts/2024-03-15-23.png)
 
 1. **오리지네이터** 클래스는 자신의 상태에 대한 스냅샷들을 생성할 수 있으며, 필요시 스냅샷에서 자신의 상태를 복원할 수도 있습니다.
 2. **메멘토**는 오리지네이터의 상태의 스냅샷 역할을 하는 값 객체입니다. 관행적으로 메멘토는 불변으로 만든 후 생성자를 통해 데이터를 한 번만 전달합니다.
@@ -434,16 +493,12 @@ Iterator<Element> title = (Iterator<Element>) map.get("title");
 
 중첩 클래스들을 지원하지 않는 프로그래밍 언어(예: PHP)에 적합한 대안적 구현 방식이 있습니다.
 
-![](https://refactoring.guru/images/patterns/diagrams/memento/structure2.png)
-
 1. 중첩 클래스들이 없는 경우, 당신은 케어테이커들이 명시적으로 선언된 중개 인터페이스를 통해서만 메멘토와 작업할 수 있는 규칙을 만들어 메멘토의 필드들에 대한 접근을 제한할 수 있습니다. 이 인터페이스는 메멘토의 메타데이터와 관련된 메서드들만 선언합니다.
 2. 반면에 오리지네이터들은 메멘토 객체와 직접 작업하여 메멘토 클래스에 선언된 필드들과 메서드들에 접근할 수 있습니다. 이 접근 방식의 단점은 메멘토의 모든 구성원을 공개(public)로 선언해야 한다는 것입니다.
 
 ### **더 엄격한 캡슐화를 사용한 구현**
 
 또 다른 구현이 있는데, 이 구현은 당신이 다른 클래스들이 오리지네이터의 상태를 메멘토를 통해 접근할 가능성을 완전히 제거하고자 할 때 유용합니다.
-
-![](https://refactoring.guru/images/patterns/diagrams/memento/structure3.png)
 
 1. 이 구현 방식을 사용하면 여러 유형의 오리지네이터들과 메멘토들을 보유할 수 있습니다. 각 오리지네이터는 그에 상응하는 메멘토 클래스와 함께 작동합니다. 오리지네이터들과 메멘토들은 자신의 상태를 누구에게도 노출하지 않습니다.
 2. 케어테이커들은 이제 메멘토들에 저장된 상태의 변경에 명시적인 제한을 받습니다. 또 케어테이커 클래스는 복원 메서드가 이제 메멘토 클래스에 정의되어 있으므로 오리지네이터에게서 독립됩니다.
@@ -469,19 +524,15 @@ Iterator<Element> title = (Iterator<Element>) map.get("title");
 
 **옵서버** 패턴은 당신이 여러 객체에 자신이 관찰 중인 객체에 발생하는 모든 이벤트에 대하여 알리는 구독 메커니즘을 정의할 수 있도록 하는 행동 디자인 패턴입니다.
 
-![](https://refactoring.guru/images/patterns/content/observer/observer.png)
-
 옵서버 패턴은 출판사 클래스에 개별 객체들이 그 출판사로부터 오는 이벤트들의 알림들을 구독 또는 구독 취소할 수 있도록 구독 메커니즘을 추가할 것을 제안합니다. 두려워하지 마세요. 그리 복잡하지 않습니다. 실제로 이 메커니즘은 1) 구독자 객체들에 대한 참조의 리스트를 저장하기 위한 배열 필드와 2) 그 리스트에 구독자들을 추가하거나 제거할 수 있도록 하는 여러 공개된(public) 메서드들로 구성됩니다.
 
-![](https://refactoring.guru/images/patterns/diagrams/observer/solution1-ko.png)
+![](/assets/img/posts/2024-03-15-24.png)
 
 구독 메커니즘을 통해 개별 객체들이 이벤트 알림들을 구독할 수 있습니다.
 
 이제 출판사에 중요한 이벤트가 발생할 때마다 구독자 리스트를 참조한 후 그들의 객체들에 있는 특정 알림 메서드를 호출합니다.
 
 ### **실제상황 적용**
-
-![](https://refactoring.guru/images/patterns/content/observer/observer-comic-2-ko.png)
 
 잡지 및 신문 구독.
 
@@ -508,7 +559,7 @@ Iterator<Element> title = (Iterator<Element>) map.get("title");
 
 **상태** 패턴은 객체의 내부 상태가 변경될 때 해당 객체가 그의 행동을 변경할 수 있도록 하는 행동 디자인 패턴입니다. 객체가 행동을 변경할 때 객체가 클래스를 변경한 것처럼 보일 수 있습니다.
 
-![](https://refactoring.guru/images/patterns/content/state/state-ko.png)
+![](/assets/img/posts/2024-03-15-25.png)
 
 ### **실제상황 적용**
 
@@ -520,7 +571,7 @@ Iterator<Element> title = (Iterator<Element>) map.get("title");
 
 ### **구조**
 
-![](https://refactoring.guru/images/patterns/diagrams/state/structure-ko.png)
+![](/assets/img/posts/2024-03-15-26.png)
 
 ### **장점**
 
@@ -538,7 +589,6 @@ Iterator<Element> title = (Iterator<Element>) map.get("title");
 
 **전략** 패턴은 알고리즘들의 패밀리를 정의하고, 각 패밀리를 별도의 클래스에 넣은 후 그들의 객체들을 상호교환할 수 있도록 하는 행동 디자인 패턴입니다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7982108d-d4ea-4fe1-8e75-807f2dcfe384/8eaa34ce-85a5-44df-ab3e-618091018f27/Untitled.png)
 
 전략 패턴은 특정 작업을 다양한 방식으로 수행하는 클래스를 선택한 후 모든 알고리즘을 *전략들*(strategies)이라는 별도의 클래스들로 추출할 것을 제안합니다.
 
@@ -549,8 +599,6 @@ Iterator<Element> title = (Iterator<Element>) map.get("title");
 이렇게 하면 콘텍스트가 구상 전략들에 의존하지 않게 되므로 콘텍스트 또는 다른 전략들의 코드를 변경하지 않고도 새 알고리즘들을 추가하거나 기존 알고리즘들을 수정할 수 있습니다.
 
 ### **실제상황 적용**
-
-![](https://refactoring.guru/images/patterns/content/strategy/strategy-comic-1-ko.png)
 
 공항에 도착하기 위한 다양한 전략들.
 
@@ -761,11 +809,9 @@ public class WhatDay{
 
 **템플릿 메서드**는 부모 클래스에서 알고리즘의 골격을 정의하지만, 해당 알고리즘의 구조를 변경하지 않고 자식 클래스들이 알고리즘의 특정 단계들을 오버라이드(재정의)할 수 있도록 하는 행동 디자인 패턴입니다.
 
-![](https://refactoring.guru/images/patterns/content/template-method/template-method.png)
-
 ### **실제상황 적용**
 
-![](https://refactoring.guru/images/patterns/diagrams/template-method/live-example.png)
+![](/assets/img/posts/2024-03-15-27.png)
 
 일반적인 건축 계획은 클라이언트의 니즈에 더 잘 부합하도록 약간 변경될 수 있습니다.
 
@@ -790,13 +836,13 @@ public class WhatDay{
 
 **비지터**(방문자) 패턴은 알고리즘들을 그들이 작동하는 객체들로부터 분리할 수 있도록 하는 행동 디자인 패턴입니다.
 
-![](https://refactoring.guru/images/patterns/content/visitor/visitor.png)
+![](/assets/img/posts/2024-03-15-28.png)
 
 비지터 패턴은 당신이 새로운 행동을 기존 클래스들에 통합하는 대신 *visitor*(방문자)라는 별도의 클래스에 배치할 것을 제안합니다. 이제 행동을 수행해야 했던 원래 객체는 visitor의 메서드 중 하나에 인수로 전달됩니다. 그러면 메서드는 원래 객체 내에 포함된 모든 필요한 데이터에 접근할 수 있습니다.
 
 ### **실제상황 적용**
 
-![](https://refactoring.guru/images/patterns/content/visitor/visitor-comic-1.png)
+![](/assets/img/posts/2024-03-15-29.png)
 
 좋은 보험 대리인은 항상 다양한 유형의 조직들에 적절한 보험을 판매할 준비가 되어 있습니다.
 

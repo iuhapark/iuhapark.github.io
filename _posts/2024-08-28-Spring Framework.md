@@ -1,6 +1,6 @@
 ---
 title: "Spring Bean, Servlet, 제어 역전 (IoC), 의존성 주입 (DI), AOP (관점 지향 프로그래밍)"
-date: 2025-02-20 14:15:03 +0900
+date: 2024-08-28 14:15:03 +0900
 categories: [Programming, Spring]
 tags: [Spring Framework, 객체지향]
 math: false
@@ -19,7 +19,7 @@ pin: true
 
 - 어노테이션을 통해 스프링에게 생성 및 관리 책임을 위임함 **제어 역전 (Inversion of Control, IoC)**
     
-    ![제어 역전](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/41443f9e-57fa-4869-ac78-9cc9c110a23e/Screenshot_2024-08-28_at_11.13.06_AM.png?table=block&id=1aa4c5ec-77c9-4fe4-b812-d3eb2ca789d9&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=AtNsQMJgj1KWAsuiq9_3C9dEXk8L7QuLBHpRYSQVB1E&downloadName=Screenshot+2024-08-28+at+11.13.06%E2%80%AFAM.png)
+    ![제어 역전](/assets/img/posts/2024-08-28-1.png)
     
 - 자바 설정 클래스 내부(@Configuration)의 @Bean 어노테이션이 붙은 메서드들을 실행하면서 빈 저장소에 실제 빈을 등록
 - 가져올 때는 정의한 빈 메서드를 사용한다.
@@ -28,9 +28,9 @@ pin: true
 
 클라이언트의 요청을 처리하고, 그 결과를 반환하는 Servlet 클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술
 
-![Screenshot 2024-08-28 at 2.33.59 PM.png](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/62810e24-e24e-427d-8dfa-ceaa4373ee32/Screenshot_2024-08-28_at_2.33.59_PM.png?table=block&id=3b4b7766-8769-4181-b910-54ea62e70c7d&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=oBqOozqs4c5Bgy3xlYwF0O8sw4ZWfvHpMrScSRzMnew&downloadName=Screenshot+2024-08-28+at+2.33.59%E2%80%AFPM.png)
+![](/assets/img/posts/2024-08-28-2.png)
 
-![Screenshot 2024-08-28 at 2.31.54 PM.png](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/b63b5495-e935-4be7-855b-8326846c018f/Screenshot_2024-08-28_at_2.31.54_PM.png?table=block&id=dd959a8a-a714-45af-9875-a4ca16ef9c08&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=W4xlXlRnKVH2T_5A8nozdcm4s7_vcXDNGeVgi98IU-4&downloadName=Screenshot+2024-08-28+at+2.31.54%E2%80%AFPM.png)
+![](/assets/img/posts/2024-08-28-3.png)
 
 TCP/IP 연결과 HTTP 요청 파싱, Content-Type 확인 등 위 이미지에서 비즈니스 로직 실행 제외한 모든 단계를 Servlet을 지원하는 WAS가 자동화해준다.
 
@@ -42,12 +42,12 @@ TCP/IP 연결과 HTTP 요청 파싱, Content-Type 확인 등 위 이미지에서
 
 서블릿 컨테이너는 서블릿 애플리케이션을 보관하고 사용자 요청에 따라 적절한 서블릿 애플리케이션을 찾아 실행한다.
 
-![HttpServlet](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/328bcb36-da48-47b3-ad4d-977b58ea6157/Screenshot_2024-08-28_at_2.37.06_PM.png?table=block&id=f2218e12-a91f-4f32-afd8-1c5ff1174386&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=tjlkVjcRQYUqM9ORmjdMGHQYQbK9qcKRWUhIo13fKNA&downloadName=Screenshot+2024-08-28+at+2.37.06%E2%80%AFPM.png)
+![HttpServlet](/assets/img/posts/2024-08-28-4.png)
 
 - HTTP 요청 정보를 편리하게 사용할 수 있는 `HttpServletRequest`
 - HTTP 응답 정보를 편리하게 제공할 수 있는 `HttpServletResponse`
 
-![Http 요청, Http 응답 흐름](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/faf3392d-3dea-4b82-86c7-73e8dacdcd4f/Screenshot_2024-08-28_at_2.38.45_PM.png?table=block&id=c59e1599-bbea-49e5-9eb0-61074eab65ba&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=vC9XZM38JnehwEEk4FVdTwRvmL5_g1OxMA6mvwTpcJU&downloadName=Screenshot+2024-08-28+at+2.38.45%E2%80%AFPM.png)
+![Http 요청, Http 응답 흐름](/assets/img/posts/2024-08-28-5.png)
 
 ### HTTP 요청, 응답 흐름
 
@@ -59,7 +59,7 @@ TCP/IP 연결과 HTTP 요청 파싱, Content-Type 확인 등 위 이미지에서
 
 ### Servelet Container
 
-![Servelet Container](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/0f077b56-4bbb-4768-a1a8-023a46ec76f7/96c826af-5abc-4fb7-8182-a78cd968d08c.png?table=block&id=b3925785-d7bd-403e-9321-8fdbb1950ccf&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=tOFAKNRQh4k0svU46ukkcgfwfNURvGDQaBDXC-OsLKQ&downloadName=Screenshot+2024-08-28+at+2.41.39%E2%80%AFPM.png)
+![Servelet Container](/assets/img/posts/2024-08-28-6.png)
 
 - 톰캣처럼 서블릿을 지원하는 WAS를 서블릿 컨테이너라고 함
 - 서블릿 컨테이너는 서블릿 객체를 생성, 초기화, 호출, 종료하는 생명주기 관리
@@ -122,7 +122,7 @@ Spring에서의 Interceptor 역할은 Client로부터 들어오는 요청( HttpR
 
 DispatcherServlet 앞에서 사용자의 요청과 응답을 처리할 수 있는 구조다. 서블릿 필터는 WAS에서 사용할 수 있는 기술이며, 기능을 웹 애플리케이션에 추가할 때도 WAS에 설정해야 한다. 이때 서블릿 필터는 여러 개 등록 가능하며, 설정을 하면 특정 URI에만 필터 기능을 적용할 수 있다.
 
-![Servlet Filter](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/e540f952-9254-47f3-bb02-b19386ea5faf/image.png?table=block&id=ee443dfc-6e7c-4f73-86d3-bdffcce063e8&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=xVyOPytMc0MyyENNFnFhXPZjKrFR2E3Vp0hyhElNBMI&downloadName=image.png)
+![Servlet Filter](/assets/img/posts/2024-08-28-7.png)
 
 ### **제어 역전 (Inversion of Control, IoC)**
 
@@ -210,7 +210,7 @@ private EntityManager entityManager;
 
 ### 멀티 쓰레드 Multi thread
 
-![멀티 쓰레드](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/1fcb3c91-6fbc-4736-88c9-b2dbf89b850c/Screenshot_2024-08-28_at_2.52.40_PM.png?table=block&id=15a9fa66-1fc0-4b1a-9315-523e0e697bd6&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=S5zTaQuBkVcsUeIzZm1FqNUoOpO3CtgXrTcX91oAk-0&downloadName=Screenshot+2024-08-28+at+2.52.40%E2%80%AFPM.png)
+![멀티 쓰레드](/assets/img/posts/2024-08-28-8.png)
 
 - 애플리케이션 코드를 하나하나 순차적으로 실행하는 것은 쓰레드, 쓰레드는 서블릿을 호출한다.
 - 자바 메인 메서드를 처음 실행하면 main이라는 이름의 쓰레드가 실행
@@ -218,11 +218,11 @@ private EntityManager entityManager;
 - 쓰레드는 한번에 하나의 코드 라인만 수행
 - 동시 처리가 필요하면 쓰레드를 추가로 생성
 
-![단일 쓰레드](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/2cda6f6b-5e45-412b-93fa-f686ed961bdd/Screenshot_2024-08-28_at_2.55.19_PM.png?table=block&id=b1901995-e9f2-4dc7-9aef-b171786c351c&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=MmZZArxtka5KigUbt-23QTH_J7j2V6C-0u76j9gLDTo&downloadName=Screenshot+2024-08-28+at+2.55.19%E2%80%AFPM.png)
+![단일 쓰레드](/assets/img/posts/2024-08-28-9.png)
 
-![쓰레드에서 한 요청의 처리가 지연되면 다음 요청 발생시 타임아웃 등 오류 발생](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/0f77c76a-1030-4bdd-854b-b10f95656644/Screenshot_2024-08-28_at_2.56.19_PM.png?table=block&id=dd33966a-fe0a-40b6-bedc-c5078dadc7dc&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=3KZiH0-tPLQ9f6FxOoMYjpRM79Xi0hL-_YNOSKS1-zM&downloadName=Screenshot+2024-08-28+at+2.56.19%E2%80%AFPM.png)
+![쓰레드에서 한 요청의 처리가 지연되면 다음 요청 발생시 타임아웃 등 오류 발생](/assets/img/posts/2024-08-28-10.png)
 
-![요청마다 쓰레드 생성](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/e6679b2d-cdc2-406a-be5d-7152fcedfdda/Screenshot_2024-08-28_at_2.57.26_PM.png?table=block&id=4935a13a-4c5e-4613-afbd-cd93822515ea&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=swvqC7T4t35sycr9K-hT91XJMiDMJKRM4o3pDbGGR7M&downloadName=Screenshot+2024-08-28+at+2.57.26%E2%80%AFPM.png)
+![요청마다 쓰레드 생성](/assets/img/posts/2024-08-28-11.png)
 
 **장점**
 
@@ -238,7 +238,7 @@ private EntityManager entityManager;
 - 쓰레드 생성에 제한이 없다.
     - 고객 요청이 너무 많이 오면, CPU, 메모리 임계점을 넘어서 서버가 죽을 수 있다.
 
-![쓰레드를 만들어놓고 풀에서 꺼내 쓰고 응답이 완료되면 반납](https://file.notion.so/f/f/bab83619-c6e6-4447-8aa1-9673ad84ed35/e30c778a-7676-41c8-bf7d-f7fec074a396/Screenshot_2024-08-28_at_3.01.12_PM.png?table=block&id=b32657c5-2691-4752-b3d6-7e3087c7016a&spaceId=bab83619-c6e6-4447-8aa1-9673ad84ed35&expirationTimestamp=1744156800000&signature=JiMgAh1MF7n7UE61iU5RliyJ8McphuNvcp_YkDjAxE8&downloadName=Screenshot+2024-08-28+at+3.01.12%E2%80%AFPM.png)
+![쓰레드를 만들어놓고 풀에서 꺼내 쓰고 응답이 완료되면 반납](/assets/img/posts/2024-08-28-12.png)
 
 **특징**
 
