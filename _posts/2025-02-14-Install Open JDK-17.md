@@ -2,7 +2,7 @@
 title: "Java 개발환경 설정"
 date: 2024-02-14 17:00:00 +0900
 categories: [Programming, Java]
-tags: [Java, 설치, 환경변수]
+tags: [Java, 환경변수]
 math: true
 toc: true
 pin: true
