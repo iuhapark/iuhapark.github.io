@@ -38,7 +38,7 @@ TCP/IP 연결과 HTTP 요청 파싱, Content-Type 확인 등 위 이미지에서
 - Java Thread를 이용하여 동작
 - MVC 패턴에서 Controller로 이용됨
 
-서블릿 애플리케이션들을 관리하고 실행하는 서버를 서블릿 컨테이너 또는 [`웹 애플리케이션 서버(WAS - Web Application Server)`](/_posts/2024-08-28-Internet-Network) 라고한다.
+서블릿 애플리케이션들을 관리하고 실행하는 서버를 서블릿 컨테이너 또는 [`웹 애플리케이션 서버(WAS - Web Application Server)`](https://iuhapark.github.io/posts/Internet-Network) 라고한다.
 
 서블릿 컨테이너는 서블릿 애플리케이션을 보관하고 사용자 요청에 따라 적절한 서블릿 애플리케이션을 찾아 실행한다.
 
@@ -132,7 +132,7 @@ DispatcherServlet 앞에서 사용자의 요청과 응답을 처리할 수 있�
 
 IoC가 개발자의 코드를 호출해 필요한 객체를 생성, 소멸 하며 생명주기를 관리하는 것이다.
 
-의존성 역전의 원칙을 패턴화한 것이 제어의 역전(Inversion of Control, loC) 패턴이다. 그리고 패턴을 구현한 구현 방법이 바로 팩토리 메서드, [**디자인 패턴**](/_posts/2024-03-15-Design-Pattern)  서비스 로케이터, 의존성 주입이다.
+의존성 역전의 원칙을 패턴화한 것이 제어의 역전(Inversion of Control, loC) 패턴이다. 그리고 패턴을 구현한 구현 방법이 바로 팩토리 메서드, [**디자인 패턴**](https://iuhapark.github.io/posts/Design-Pattern)  서비스 로케이터, 의존성 주입이다.
 
 ### **의존성 주입(Dependency Injection, DI)**
 
