@@ -1,5 +1,5 @@
 ---
-title: "Spring Bean, Servlet, 제어 역전 (IoC), 의존성 주입 (DI), AOP (관점 지향 프로그래밍)"
+title: "Spring Bean, Servlet, Springd의 3대 요소"
 date: 2024-08-28 14:15:03 +0900
 categories: [Programming, Spring]
 tags: [Spring Framework, 객체지향]

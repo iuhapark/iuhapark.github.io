@@ -1,5 +1,5 @@
 ---
-title: "디자인 패턴 (생성 패턴, 구조 패턴, 행동 패턴)"
+title: "디자인 패턴(생성 패턴, 구조 패턴, 행동 패턴)"
 date: 2025-03-15 17:27:15 +0900
 categories: [Programming, Design Pattern]
 tags: [SOLID, 객체지향]
