@@ -84,7 +84,7 @@ TCP/IP 연결과 HTTP 요청 파싱, Content-Type 확인 등 위 이미지에서
     
     The following example of the Java configuration registers and initializes the `DispatcherServlet`, which is auto-detected by the Servlet container (see [Servlet Config](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-servlet/container-config.html)):
     
-    ```jsx
+    ```java
     public class MyWebApplicationInitializer implements WebApplicationInitializer {
     
     	@Override
