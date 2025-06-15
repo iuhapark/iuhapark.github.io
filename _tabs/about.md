@@ -4,5 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+> Java, Spring Boot, Typescript, Next.js, React, Spring Data JPA, MySQL을 기반으로 Spring Cloud, Docker, Jenkins를 다루는 풀스택 개발자 박주하입니다.
+
 {: .prompt-tip }
